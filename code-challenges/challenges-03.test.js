@@ -93,6 +93,16 @@ const alphabetizeBetter = (leftString, rightString) => {
   }
 }
 
+/* this only works if you pass in "arr.sort(alphabetizeBetter)" to test.
+
+According to the test, it is passing in "alphabetizeBetter(arr)"; which means that I should preserve the original
+
+const alphabetizeBetter = (arr) => arr.sort((leftString, rightString)) => {
+
+}
+However, this returns a syntax error.
+
+Question: how do you pass in the array (e.g. (arr) and not (leftString, rightString)) and still set up the comparison; any other 'return' statements?
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
