@@ -27,9 +27,9 @@ CHALLENGE 2
 Write a function named sortBackwards that takes in an array of numbers and returns the same array, with the numbers sorted, highest to smallest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBackwards = (arr) => arr.sort((a,b) => b - a)
+const sortBackwards = (arr) => arr.sort((a,b) => b - a);
   
-/* below is same code as above written differently:
+/* below is same code as above written differently (based on discussion with Chance (TA)):
 
 const sortBackwards = (arr) => arr.sort((a,b) => {
     return b-a;
@@ -60,9 +60,9 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-};
+const alphabetize = (arr) => arr.sort();
+  
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -70,9 +70,10 @@ CHALLENGE 4
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = (arr) => {
-  // Solution code here...
-};
+const sortByLength = (arr) => arr.sort((a,b) => a.length - b.length);
+
+
+/* Source: https://solidfoundationwebdev.com/posts/sort-an-array-by-element-length-in-javascript */
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -82,9 +83,16 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetizeBetter = (arr) => {
-  // Solution code here...
-};
+const alphabetizeBetter = (leftString, rightString) => {
+  if(leftString.toLowerCase() < rightString.toLowerCase()){
+    return -1
+  } else if (leftString.toLowerCase() > rightString.toLowerCase()){
+    return 1
+  } else {
+    return 0
+  }
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
