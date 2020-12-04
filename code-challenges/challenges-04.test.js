@@ -54,10 +54,10 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  const matchArr = [];
-  git 
+  const regex = /[A-Z][a-zA-Z]*/;
+  const bool = str.match(regex);
   
-  return matchArr
+  return bool;
 };
 
 /* ------------------------------------------------------------------------------------------------
